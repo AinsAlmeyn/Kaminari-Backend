@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageId>Wms-Shared-DataAccess</PackageId>
+		<Title>Wms-Shared-DataAccess</Title>
+		<Authors>Yildiray Kocak</Authors>
+		<Company>NCode</Company>
+		<Product>Wms-Shared-DataAccess</Product>
+		<Description>easy to use</Description>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MongoDB.Driver" Version="2.22.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\WMS.Core\WMS.Core.csproj" />
+	</ItemGroup>
+
+</Project>

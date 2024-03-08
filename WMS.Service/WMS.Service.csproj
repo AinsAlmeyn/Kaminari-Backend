@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageId>Wms-Shared-Service</PackageId>
+		<Title>Wms-Shared-Service</Title>
+		<Authors>Yildiray Kocak</Authors>
+		<Company>NCode</Company>
+		<Product>Wms-Shared-Service</Product>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MassTransit.RabbitMQ" Version="8.1.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.26" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\WMS.DataAccess\WMS.DataAccess.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="ServiceConnector\Connectors\" />
+	</ItemGroup>
+
+</Project>

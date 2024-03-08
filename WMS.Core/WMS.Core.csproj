@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageId>Wms-Shared-Core</PackageId>
+		<Title>Wms-Shared-Core</Title>
+		<Authors>Yildiray Kocak</Authors>
+		<Company>NCode</Company>
+		<Product>Wms-Shared-Core</Product>
+		<Description>easy wms to use</Description>
+		<PackageReadmeFile></PackageReadmeFile>
+		<Version>1.0.1</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Entities\Communication\**" />
+	  <Compile Remove="Entities\ConnectionAndSettings\RabbitMQ\**" />
+	  <Compile Remove="Entities\Database\SqlServer\**" />
+	  <EmbeddedResource Remove="Entities\Communication\**" />
+	  <EmbeddedResource Remove="Entities\ConnectionAndSettings\RabbitMQ\**" />
+	  <EmbeddedResource Remove="Entities\Database\SqlServer\**" />
+	  <None Remove="Entities\Communication\**" />
+	  <None Remove="Entities\ConnectionAndSettings\RabbitMQ\**" />
+	  <None Remove="Entities\Database\SqlServer\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MassTransit.RabbitMQ" Version="8.1.2" />
+		<PackageReference Include="MongoDB.Driver" Version="2.22.0" />
+	</ItemGroup>
+
+</Project>
